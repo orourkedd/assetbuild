@@ -3,7 +3,18 @@ var _ = require('lodash');
 module.exports = function (gulp, distName, config) {
 	config = _.assign({
 		scriptLibs: [],
-		styleLibs: []
+		styleLibs: [],
+		browserify: {
+			extensions: ['.jsx'],
+			ignoreMissing: true
+		},
+		reactify: {
+			extension: '.jsx',
+			es6: true
+		},
+		nodeSass: {},
+		tmpDir: '/tmp',
+		dest: './server/public'
 	}, config);
 
 	require('./lib/scripts-browserify')(gulp, distName, config);
