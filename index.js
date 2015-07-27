@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-module.exports = function (gulp, distName, config) {
+module.exports = function(gulp, distName, config) {
 	config = _.assign({
 		scriptLibs: [],
 		styleLibs: [],
@@ -14,7 +14,8 @@ module.exports = function (gulp, distName, config) {
 		},
 		nodeSass: {},
 		tmpDir: '/tmp',
-		dest: './server/public'
+		dest: './server/public',
+		src: './client'
 	}, config);
 
 	require('./lib/scripts-browserify')(gulp, distName, config);
