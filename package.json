@@ -1,6 +1,6 @@
 {
   "name": "orourkedd-assetbuild",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A few gulp tasks for asset building.",
   "main": "index.js",
   "scripts": {

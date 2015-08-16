@@ -5,17 +5,14 @@ module.exports = function(gulp, distName, config) {
 		scriptLibs: [],
 		styleLibs: [],
 		browserify: {
-			extensions: ['.jsx'],
+			extensions: ['.js', '.json', '.jsx'],
 			ignoreMissing: true
-		},
-		reactify: {
-			extension: '.jsx',
-			es6: true
 		},
 		nodeSass: {},
 		tmpDir: '/tmp',
-		dest: './server/public',
-		src: './client'
+		dest: './public',
+		src: './src',
+		shim: false
 	}, config);
 
 	require('./lib/scripts-browserify')(gulp, distName, config);
