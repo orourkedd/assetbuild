@@ -12,7 +12,8 @@ module.exports = function(gulp, distName, config) {
 		tmpDir: '/tmp',
 		dest: './public',
 		src: './src',
-		shim: false
+		shim: false,
+		transforms: []
 	}, config);
 
 	require('./lib/scripts-browserify')(gulp, distName, config);
